@@ -1,0 +1,256 @@
+/* .container {
+
+    position: absolute;
+    width: 100px;
+    height: 100px;
+
+    left: 330px;
+    top: 100px;
+}
+
+fieldset {
+    position: relative;
+    top: 20px;
+    z-index: 4;
+    margin: 0px auto;
+    width: 400px;
+    height: 150px;
+    border-radius: 20px;
+    border: solid 1px;
+    padding: 20px;
+    box-shadow: 4px 4px 8px blue;
+}
+
+legend {
+    color: rgb(214, 246, 70);
+    background-color: rgb(45, 74, 218);
+    border: 1px solid red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+label {
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+[type="submit"] {
+    position: relative;
+    display: block;
+    margin: 20px auto;
+    width: 140px;
+    height: 30px;
+
+
+}
+
+.input-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 6;
+}
+
+label {
+    flex-basis: 20%;
+    text-align: left;
+}
+
+[type="text"],
+[type="password"] {
+    flex-basis: 78%;
+    margin-bottom: 20px;
+}
+
+#login {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+
+}
+*/
+#logo {
+    width: 200px;
+    position: absolute;
+    opacity: .6;
+    z-index: -1;
+
+}
+
+header {
+    width: 100%;
+    height: 200px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body {
+
+    padding: 0;
+    margin: 0px auto;
+}
+
+h1 {
+    text-align: center;
+    margin: 10px auto;
+    font-size: 40px;
+    position: relative;
+    top: 50px;
+    z-index: 4;
+
+}
+
+
+
+
+.titre {
+    font-size: 54px;
+    color: black;
+    font-weight: bold;
+    text-shadow: 14px 4px 14px rgb(172, 167, 182);
+}
+
+.titre span:nth-child(1) {
+    animation: animText 13s alternate infinite;
+    animation-delay: .1s;
+}
+
+.titre span:nth-child(2) {
+    animation: animText 13s alternate infinite;
+    animation-delay: .2s;
+}
+
+.titre span:nth-child(3) {
+    animation: animText 13s alternate infinite;
+    animation-delay: .3s;
+}
+
+.titre span:nth-child(4) {
+    animation: animText 13s alternate infinite;
+    animation-delay: .4s;
+}
+
+.titre span:nth-child(5) {
+    animation: animText 13s alternate infinite;
+    animation-delay: .5s;
+}
+
+.titre span:nth-child(6) {
+    animation: animText 13s alternate infinite;
+    animation-delay: .6s;
+}
+
+.titre span:nth-child(7) {
+    animation: animText 13s alternate infinite;
+    animation-delay: .7s;
+}
+
+.titre span:nth-child(8) {
+    animation: animText 13s alternate infinite;
+    animation-delay: .8s;
+}
+
+.titre span:nth-child(9) {
+    animation: animText 13s alternate infinite;
+    animation-delay: .9s;
+}
+
+.titre span:nth-child(10) {
+    animation: animText 13s alternate infinite;
+    animation-delay: .10s;
+}
+
+.titre span:nth-child(11) {
+    animation: animText 13s alternate infinite;
+    animation-delay: .11s;
+}
+
+.titre span:nth-child(12) {
+    animation: animText 13s alternate infinite;
+    animation-delay: .12s;
+}
+
+.titre span:nth-child(13) {
+    animation: animText 13s alternate infinite;
+    animation-delay: .13s;
+}
+
+.titre span:nth-child(14) {
+    animation: animText 13s alternate infinite;
+    animation-delay: .14s;
+}
+
+.titre span:nth-child(15) {
+    animation: animText 13s alternate infinite;
+    animation-delay: .15s;
+}
+
+.titre span:nth-child(16) {
+    animation: animText 13s alternate infinite;
+    animation-delay: .16s;
+}
+
+.titre span:nth-child(17) {
+    animation: animText 13s alternate infinite;
+    animation-delay: .17s;
+}
+
+.titre span:nth-child(18) {
+    animation: animText 13s alternate infinite;
+    animation-delay: .18s;
+}
+
+
+@keyframes animText {
+    25% {
+        font-size: 64px;
+        color: #a5a59c;
+    }
+
+    90% {
+        font-size: 50px;
+        color: black;
+    }
+
+    100% {
+        font-size: 54px;
+        color: rgb(165, 165, 155);
+    }
+
+
+}
+
+
+
+
+
+.box-register {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+
+.custom-shape-divider-bottom-1678215897 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1678215897 svg {
+    position: relative;
+    display: block;
+    width: calc(107% + 1.3px);
+    height: 149px;
+}
+
+.custom-shape-divider-bottom-1678215897 .shape-fill {
+    fill: #A5A59B;
+}

@@ -1,0 +1,41 @@
+.hidden {
+    display:none;
+}
+
+.fr{
+    padding-top:100px;
+    padding-bottom:100px;
+}
+
+
+.custom-shape-divider-bottom-1678302607 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1678302607 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+.custom-shape-divider-bottom-1678302607 .shape-fill {
+    fill: #68684E;
+}
+
+@media print{
+    body *:not(#my-table):not(#my-table *){
+        visibility: hidden;
+    }
+    #my-table{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
