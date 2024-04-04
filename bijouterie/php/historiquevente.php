@@ -6,8 +6,8 @@ $res = mysqli_query($cnx, $req);
 
 ?>
 
-<link href="/bijouterie/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-<link href="/bijouterie/css/sb-admin-2.min.css" rel="stylesheet">
+<link href="../vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+<link href="../css/sb-admin-2.min.css" rel="stylesheet">
 
 
 
@@ -16,13 +16,13 @@ $res = mysqli_query($cnx, $req);
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <title>Page Title</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" media="screen" href="/bijouterie/css/main.css">
+<link rel="stylesheet" type="text/css" media="screen" href="../css/main.css">
 <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/bijouterie/js/sidebar.js"></script>
+<script src="../js/sidebar.js"></script>
 
 
 <body id="body-pd">
@@ -133,14 +133,14 @@ $res = mysqli_query($cnx, $req);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
     <!-- Core plugin JavaScript-->
-    <script src="/bijouterie/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="/bijouterie/js/sb-admin-2.min.js"></script>
+    <script src="../js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="/bijouterie/vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="/bijouterie/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="../vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="../vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="/bijouterie/js/datatables-demo.js"></script>
+    <script src="../js/datatables-demo.js"></script>

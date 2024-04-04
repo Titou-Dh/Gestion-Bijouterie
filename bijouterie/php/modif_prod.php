@@ -41,7 +41,7 @@ mysqli_close($cnx);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="/bijouterie/css/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -51,9 +51,9 @@ mysqli_close($cnx);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.1/css/bootstrap.min.css" integrity="sha512-yJHzUg8xUprC6KnsIp6SBzLTFjKoIhSjZbxPTlZwzBnwASW8R4hz39y4A2/cdOkMkzKO2f1bZMzJZKNKpEVNGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.1/js/bootstrap.min.js" integrity="sha512-6o5U6HjL6yxydZfW1htXKjZBlYc/L7F47spzzWJn7hnBjLkivzWZQahIv7D1S+b6uXpdVgQy87uOF4w4Ab3qPw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <script src="/bijouterie/js/sidebar.js"></script>
-    <link rel="stylesheet" href="/bijouterie/css/ajout.css">
-    <script src="/bijouterie/js/controle1.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <link rel="stylesheet" href="../css/ajout.css">
+    <script src="../js/controle1.js"></script>
 
 </head>
 

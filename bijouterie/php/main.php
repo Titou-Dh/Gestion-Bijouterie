@@ -13,7 +13,7 @@ echo'<!DOCTYPE html>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="/bijouterie/css/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -22,7 +22,7 @@ echo'<!DOCTYPE html>
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="/bijouterie/js/sidebar.js"></script>
+    <script src="../js/sidebar.js"></script>
 </head>
 <body id="body-pd">
     <header class="header shadow" id="header">
