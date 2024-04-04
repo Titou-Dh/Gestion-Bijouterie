@@ -25,7 +25,7 @@ mysqli_close($cnx);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="/bijouterie/css/main.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/main.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.min.css">
@@ -39,9 +39,9 @@ mysqli_close($cnx);
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.1/js/bootstrap.min.js" integrity="sha512-6o5U6HjL6yxydZfW1htXKjZBlYc/L7F47spzzWJn7hnBjLkivzWZQahIv7D1S+b6uXpdVgQy87uOF4w4Ab3qPw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-    <script src="/bijouterie/js/sidebar.js"></script>
-    <link rel="stylesheet" href="/bijouterie/css/ajout.css">
-    <script src="/bijouterie/js/controle1.js"></script>
+    <script src="../js/sidebar.js"></script>
+    <link rel="stylesheet" href="../css/ajout.css">
+    <script src="../js/controle1.js"></script>
 </head>
 
 <body id="body-pd">
@@ -72,7 +72,7 @@ mysqli_close($cnx);
 
 
 
-    <link rel="stylesheet" href="/bijouterie/css/ajout.css">
+    <link rel="stylesheet" href="../css/ajout.css">
     <div class="fr resp">
         <div class="container w-50 bg-light  py-3  shadow">
             <h3 class="text-secondary w-100 text-center">Ajouter une catégorie</h3>
