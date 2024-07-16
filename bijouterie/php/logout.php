@@ -1,15 +1,14 @@
 
 <?php
 session_start();
-if(!isset($_SESSION["user"])){
-  unset($_SESSION["user"]);  
+if (!isset($_SESSION["user"])) {
+  unset($_SESSION["user"]);
   session_destroy();
-    header("Location: index.php"); 
-    exit();   
-  }
-  else{
-    session_destroy();
-    header("Location: index.php");
-    exit();
-  }
+  header("Location: index.php");
+  exit();
+} else {
+  session_destroy();
+  header("Location: index.php");
+  exit();
+}
 ?>

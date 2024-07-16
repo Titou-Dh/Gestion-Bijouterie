@@ -5,31 +5,31 @@ $req = "SELECT * FROM categorie";
 $res = mysqli_query($cnx, $req) or die(mysqli_error($cnx));
 
 
-if(isset($_GET['numserie'])){
-    $numserie=$_GET['numserie'];
-    $req1 = mysqli_query($cnx,"SELECT * FROM produit WHERE numserie='$numserie'") or die(mysqli_error($cnx));
+if (isset($_GET['numserie'])) {
+    $numserie = $_GET['numserie'];
+    $req1 = mysqli_query($cnx, "SELECT * FROM produit WHERE numserie='$numserie'") or die(mysqli_error($cnx));
     $prod = mysqli_fetch_array($req1);
-    $lib=$prod['libelle'];
+    $lib = $prod['libelle'];
     $qt = $prod['qte'];
     $pu = $prod['pu'];
-    $poids=$prod['poids'];}
+    $poids = $prod['poids'];
+}
 
 
 
-if (isset($_REQUEST['modifier']))
-{
-    
-        $cat = $_POST['categorie'];
-        $lib = $_POST['lib'];
-        $qt = $_POST['qt'];
-        $pu = $_POST['pu'];
-        $karat = $_POST['karat'];
-        $poids=$_POST['poids'];
-        $req2 = "UPDATE produit set libelle='$lib', qte='$qt', pu='$pu', poids='$poids',categorie='$cat', karat='$karat' where numserie='$numserie'";
-        $res2 = mysqli_query($cnx, $req2) or die(mysqli_error($cnx));
-        if (mysqli_affected_rows($cnx) == -1)
-          $message = "!!! modification echouée";
-        else
+if (isset($_REQUEST['modifier'])) {
+
+    $cat = $_POST['categorie'];
+    $lib = $_POST['lib'];
+    $qt = $_POST['qt'];
+    $pu = $_POST['pu'];
+    $karat = $_POST['karat'];
+    $poids = $_POST['poids'];
+    $req2 = "UPDATE produit set libelle='$lib', qte='$qt', pu='$pu', poids='$poids',categorie='$cat', karat='$karat' where numserie='$numserie'";
+    $res2 = mysqli_query($cnx, $req2) or die(mysqli_error($cnx));
+    if (mysqli_affected_rows($cnx) == -1)
+        $message = "!!! modification echouée";
+    else
         header("Location: stock.php");
 }
 
@@ -68,7 +68,7 @@ mysqli_close($cnx);
                 <div class="nav_list">
                     <a href="listevente.php" class="nav_link"> <i class="bx bx-grid-alt nav_icon"></i><span class="nav_name">Dashboard</span> </a>
                     <a href="#" class="nav_link"> <i class="bx bx-cart-add nav_icon"></i> <span class="nav_name">Ajouter</span> </a>
-                    
+
                     <a href="#" class="nav_link" data-bs-toggle="collapse" data-bs-target="#ls"> <i class="bx bx-purchase-tag-alt nav_icon"></i> <span class="nav_name">Vente</span> </a>
                     <div id="ls" class="collapse">
                         <a href="vente.php" class="nav_link"> <i class="bx bx-purchase-tag-alt nav_icon"></i> <span class="nav_name">Vente article</span> </a>
@@ -76,6 +76,7 @@ mysqli_close($cnx);
                         <a href="historiquevente.php" class="nav_link"> <i class='bx bx-history nav_icon'></i> <span class="nav_name">Historique</span> </a>
                     </div>
                     <a href="stock.php" class="nav_link"> <i class="bx bx-package nav_icon"></i> <span class="nav_name">Stock</span> </a>
+                    <a href="reparation.php" class="nav_link"> <i class='bx bx-wrench'></i> <span class="nav_name">Reparation</span> </a>
                     <a href="listecategorie.php" class="nav_link"> <i class='bx bx-category-alt nav_icon'></i> <span class="nav_name">Catégorie</span> </a>
                     <a href="utilisateur.php" class="nav_link"> <i class="bx bx-user nav_icon"></i> <span class="nav_name">Users</span> </a>
                 </div>
@@ -113,25 +114,25 @@ mysqli_close($cnx);
                 <div class="row">
                     <div class="col">
                         <label for="pd" class="my-2">Numéro de série :</label>
-                        <input type="text" id='ns' placeholder="Numéro de série" class="form-control" name="ns" disabled value="<?php echo $numserie?>">
+                        <input type="text" id='ns' placeholder="Numéro de série" class="form-control" name="ns" disabled value="<?php echo $numserie ?>">
                     </div>
                     <div class="col">
                         <label for="pd" class="my-2">Poids :</label>
-                        <input type="text" placeholder="Poids" class="form-control" name="poids" id='poi' value="<?php echo $poids?>" required/>
+                        <input type="text" placeholder="Poids" class="form-control" name="poids" id='poi' value="<?php echo $poids ?>" required />
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="pd" class="my-2">Libellé :</label>
-                    <input type="text" id='pd' placeholder="Libellé" class="form-control" name="lib" value="<?php echo $lib?>"required/>
+                    <input type="text" id='pd' placeholder="Libellé" class="form-control" name="lib" value="<?php echo $lib ?>" required />
                 </div>
                 <div class="row">
                     <div class="col">
                         <label for="qt" class="my-2 ">Quantité :</label>
-                        <input type="number" min="1" id='qt' placeholder="Quantité" class="form-control" name="qt" value="<?php echo $qt?>"required />
+                        <input type="number" min="1" id='qt' placeholder="Quantité" class="form-control" name="qt" value="<?php echo $qt ?>" required />
                     </div>
                     <div class="col">
                         <label for="pr" class="my-2 ">Prix :</label>
-                        <input type="text" id='pu' placeholder="Prix" class="form-control" name="pu" value="<?php echo $pu?>"required />
+                        <input type="text" id='pu' placeholder="Prix" class="form-control" name="pu" value="<?php echo $pu ?>" required />
                     </div>
                     <div id="erreur"></div>
                 </div>
@@ -143,7 +144,7 @@ mysqli_close($cnx);
                 if (!empty($message2)) {
                     echo "<p class='text-success h4'>" . $message2 . "</p>";
                 }
-                
+
                 ?>
             </form>
 

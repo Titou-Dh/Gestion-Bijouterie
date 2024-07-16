@@ -1,12 +1,12 @@
 <?php
-  // Initialiser la session
+// Initialiser la session
 session_start();
-  // Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion
-if(!isset($_SESSION["user"])){
+// Vérifiez si l'utilisateur est connecté, sinon redirigez-le vers la page de connexion
+if (!isset($_SESSION["user"])) {
     header("Location:index.php");
 }
 
-echo'<!DOCTYPE html>
+echo '<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -43,6 +43,7 @@ echo'<!DOCTYPE html>
                         <a href="historiquevente.php" class="nav_link"> <i class="bx bx-history nav_icon" ></i> <span class="nav_name">Historique</span> </a>
                         </div>
                         <a href="stock.php" class="nav_link"> <i class="bx bx-package nav_icon"></i> <span class="nav_name">Stock</span> </a>
+                        <a href="reparation.php" class="nav_link"> <i class="bx bx-wrench"></i> <span class="nav_name">Reparation</span> </a>
                         <a href="listecategorie.php" class="nav_link"> <i class="bx bx-category-alt nav_icon"></i> <span class="nav_name">Catégorie</span> </a> 
                         <a href="utilisateur.php" class="nav_link"> <i  class="bx bx-user nav_icon"></i> <span class="nav_name">Users</span> </a> 
                 </div>
@@ -54,12 +55,9 @@ echo'<!DOCTYPE html>
 
     <main>
     <div class="sucess " style="padding-top:90px;">
-        <h1>Bienvenue ' .$_SESSION["user"].'!</h1>
+        <h1>Bienvenue ' . $_SESSION["user"] . '!</h1>
         
     
 </body>
 </html>';
 header("Location: listevente.php");
-
-?>
-

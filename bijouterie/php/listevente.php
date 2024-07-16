@@ -1,6 +1,6 @@
 <?php
 include 'connexion.php';
-$user=$_SESSION["user"];
+$user = $_SESSION["user"];
 $date = date('d-m-Y');
 $req = "SELECT * 
         FROM vente where datev LIKE '$date%'
@@ -43,14 +43,15 @@ mysqli_close($cnx);
                 <div class="nav_list">
                     <a href="listevente.php" class="nav_link"> <i class="bx bx-grid-alt nav_icon"></i><span class="nav_name">Dashboard</span> </a>
                     <a href="ajout.php" class="nav_link"> <i class="bx bx-cart-add nav_icon"></i> <span class="nav_name active">Ajouter</span> </a>
-                    
-                    <a href="#" class="nav_link" data-bs-toggle="collapse" data-bs-target="#ls" > <i class="bx bx-purchase-tag-alt nav_icon"></i> <span class="nav_name">Vente</span> </a>
+
+                    <a href="#" class="nav_link" data-bs-toggle="collapse" data-bs-target="#ls"> <i class="bx bx-purchase-tag-alt nav_icon"></i> <span class="nav_name">Vente</span> </a>
                     <div id="ls" class="collapse">
-                    <a href="vente.php" class="nav_link"> <i class="bx bx-purchase-tag-alt nav_icon"></i> <span class="nav_name">Vente article</span> </a>
+                        <a href="vente.php" class="nav_link"> <i class="bx bx-purchase-tag-alt nav_icon"></i> <span class="nav_name">Vente article</span> </a>
                         <a href="listevente.php" class="nav_link"> <i class='bx bx-list-ul nav_icon'></i> <span class="nav_name">Liste</span> </a>
-                        <a href="historiquevente.php" class="nav_link"> <i class='bx bx-history nav_icon' ></i> <span class="nav_name">Historique</span> </a>
+                        <a href="historiquevente.php" class="nav_link"> <i class='bx bx-history nav_icon'></i> <span class="nav_name">Historique</span> </a>
                     </div>
                     <a href="stock.php" class="nav_link"> <i class="bx bx-package nav_icon"></i> <span class="nav_name">Stock</span> </a>
+                    <a href="reparation.php" class="nav_link"> <i class='bx bx-wrench'></i> <span class="nav_name">Reparation</span> </a>
                     <a href="listecategorie.php" class="nav_link"> <i class='bx bx-category-alt nav_icon'></i> <span class="nav_name">Catégorie</span> </a>
                     <a href="utilisateur.php" class="nav_link"> <i class="bx bx-user nav_icon"></i> <span class="nav_name">Users</span> </a>
                 </div>
@@ -67,7 +68,7 @@ mysqli_close($cnx);
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
-        <div class="card-header d-flex justify-content-between py-3">
+            <div class="card-header d-flex justify-content-between py-3">
                 <h6 class="m-0 font-weight-bold text-primary">Liste des opérations:</h6>
                 <a href='vente.php'><button class="btn btn-primary" type="submit">Ajouter</button></a>
             </div>
@@ -82,7 +83,7 @@ mysqli_close($cnx);
                                 <th>Utilisateur</th>
                             </tr>
                         </thead>
-                        
+
                         <?php
                         while ($op = mysqli_fetch_array($res)) {
                             echo '
@@ -98,13 +99,15 @@ mysqli_close($cnx);
                         <tr></tr>
                         <tr></tr>
                         <tr>
-                                <td><h4>Total des ventes</h4></td>
-                                <?php 
-                                echo'<td colspan="3" h4>'.$totpv.'</td>';
-                                ?>
-                                
+                            <td>
+                                <h4>Total des ventes</h4>
+                            </td>
+                            <?php
+                            echo '<td colspan="3" h4>' . $totpv . '</td>';
+                            ?>
+
                         </tr>
-                        
+
                         </tbody>
                     </table>
                 </div>
