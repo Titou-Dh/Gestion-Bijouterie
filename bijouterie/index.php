@@ -48,7 +48,7 @@ if (isset($_POST['user'])) {
             <span>r</span>
             <span>i</span>
             <span>e</span>
-            &nbsp
+            <!-- &nbsp
             <span>B</span>
             <span>e</span>
             <span>n</span>
@@ -57,9 +57,9 @@ if (isset($_POST['user'])) {
             <span>l</span>
             <span>o</span>
             <span>u</span>
-            <span>a</span>
+            <span>a</span> -->
         </div>
-    <img src='/bijouterie/logo.png' id='logo'>
+    <img src='./logo.png' id='logo'>
 </header>
 
 <div class='container-sm w-25 p-3 mt-5 border rounded shadow'>
