@@ -1,27 +1,35 @@
 <?php
 include 'connexion.php';
-if (isset($_REQUEST['ajouter'])) {
+
+if(isset($_REQUEST['ajouter'])){
+    $categorie = $_POST['categorie'];
+    $karat = $_POST['karat'];
     $ns = $_POST['ns'];
-    $cat = $_POST['categorie'];
+    $poids = $_POST['poids'];
     $lib = $_POST['lib'];
     $qt = $_POST['qt'];
     $pu = $_POST['pu'];
-    $poids = $_POST['poids'];
-    $karat = $_POST['karat'];
-    $req1 = "SELECT* FROM produit WHERE numserie ='$ns'";
+    $date = date('d-m-Y H:i:s');
+    $user = $_SESSION["user"];
+    $req1 = "SELECT * FROM reparation WHERE numserie ='$ns'";
     $res1 = mysqli_query($cnx, $req1);
-
-    if (mysqli_num_rows($res1) > 0)
-        $message1 = "!!! Numéro de série existe dans la base";
+    $row = mysqli_fetch_array($res1);
+    if (mysqli_num_rows($res1) != 0)
+        $message1 = "!!! Numéro de série existe déjà";
     else {
-        $req3 = "INSERT INTO  produit VALUES ('$ns','$lib','$qt','$pu','$poids','$cat','$karat')";
-        $res3 = mysqli_query($cnx, $req3);
-        if (mysqli_affected_rows($cnx) == -1)
-            $message2 = "!!! Ajout echouée";
-        else
-            $message3 = 'N°serie ' . $ns . '<br> Prix ' . $pu . ' DT<br> Poids ' . $poids . ' Gr';
+        $req2 = "insert into reparation values('$ns','$lib','$qt','$pu','$poids','$categorie','$karat','$date','$user')";
+        $res2 = mysqli_query($cnx, $req2);
+        if(mysqli_affected_rows($cnx) == -1)
+            $message2 = "Opération echouée";
+        else {
+            $message3 = "Ajout effectué avec succée";
+        }
     }
+    
+    
 }
+
+
 $req = "SELECT * FROM categorie";
 $res = mysqli_query($cnx, $req) or die(mysqli_error($cnx));
 
@@ -106,6 +114,7 @@ mysqli_close($cnx);
                                         <option value="0" disabled selected>Sélectionner le Carat</option>
                                         <option value="9">9</option>
                                         <option value="18">18</option>
+                                        <option value="24">24</option>
                                     </select>
                                 </div>
                             </div>
@@ -130,14 +139,13 @@ mysqli_close($cnx);
                                     <input type="number" min="1" id='qt' placeholder="Quantité" class="form-control" name="qt">
                                 </div>
                                 <div class="col">
-                                    <label for="pr" class="my-2 ">Prix :</label>
+                                    <label for="pr" class="my-2 ">Prix de reparation :</label>
                                     <input type="text" id='pu' placeholder="Prix" class="form-control" name="pu">
                                 </div>
                                 <div id="erreur"></div>
                             </div>
                             <div class='w-100 my-3 text-center'>
                                 <button type="submit" name="ajouter" class="btn btn-secondary" onclick="return verifajout()">Ajouter</button>
-                                <button id="imprimer" class="btn btn-secondary">Imprimer</button>
                             </div>
 
                             <?php
